@@ -8,3 +8,6 @@
 - [ ] bootstrap
 - [ ] react.js
 - [ ] vue.js
+
+## coding 練習します
+- [ ] アジェンダ機能をしてみてください。一時bootstrap利用しないで。

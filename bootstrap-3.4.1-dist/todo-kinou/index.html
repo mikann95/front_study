@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todoDemo</title>
+    <link rel="stylesheet" type="text/css" href="todo.css" />
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+
+<body>
+    <div class="content">
+        <div class="search">
+            <input id="search" onkeydown="tuika_input(event)" type="text" maxlength="14" class="search_area" placeholder="何か入力して。１４桁max">
+            <button id="add" class="search_btn">追 加</button>
+        </div>
+        <hr>
+        <div class="todoContainer">
+            <ul id="todolist" class="todoLists">
+                <li class="todoItem" onclick="tododone(this)">
+                    <span class="todoContent">仕事</span>
+                    <button onclick="deletetodo(this)" class="delete">削除</button>
+                </li>
+                <li class="todoItem tododone">
+                    <span class="todoContent">ご飯</span>
+                    <button onclick="deletetodo(this)" class="delete">削除</button>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <script src="todo.js" type="text/javascript"></script>
+    <script>
+        //追加　メソッド
+        function tuika() {
+            var inputEL = document.getElementById("search")
+            var inputContent = inputEL.value
+            if (inputContent) {
+                var newtodo = document.createElement('li')
+                newtodo.setAttribute('onclick', 'tododone(this)')
+                newtodo.innerHTML =
+                    "<span class='todoContent'>" + inputContent + "</span>" +
+                    "<button  class='delete'  onclick=deletetodo(this)>削除</button>";
+                todolistEl.append(newtodo)
+            }
+            inputEL.value = '';
+        }
+
+        //Enter key
+        function tuika_input(e) {
+            var evt = window.event || e;
+            if (evt.keyCode == 13) {
+                tuika()
+            }
+        }
+    </script>
+</body>
+
+</html>
