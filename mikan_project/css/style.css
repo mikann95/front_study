@@ -1,0 +1,33 @@
+header {
+    height: 60px;
+    width: 100%;
+    background-color: rgb(41, 131, 75);
+    display: flex;
+    justify-content: center;
+}
+
+header h1 {
+    color: black;
+    letter-spacing: 2px;
+    line-height: 20px;
+    margin: 20;
+}
+header ul {
+    width: 1000px;
+    display: flex;
+    margin: 0 auto;
+}
+header li {
+    color: cornsilk;
+    list-style: none;
+    line-height: 60px;
+    width: 30%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    font-weight: bolder;
+    margin: 0 100px;
+}
+
+header li:hover{
+    color: chocolate;
+}
