@@ -1,22 +1,53 @@
-header {
-    height: 60px;
-    width: 100%;
-    background-color: rgb(41, 131, 75);
-    display: flex;
-    justify-content: center;
+@charset "UTF-8";
+html {
+    overflow-y: scroll;
+
+
+    scroll-behavior: smooth;
 }
 
-header h1 {
-    color: black;
-    letter-spacing: 2px;
-    line-height: 20px;
-    margin: 20;
+body, h1, h2, h3, h4, h5, p, ul, ol, li, dl, dt, dd {
+    margin:0px;
+    padding: 0px;
 }
-header ul {
-    width: 1000px;
+body {
+    background:#fff;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.4;
+    min-width: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+li {
+    list-style: none;
+}
+a {
+    outline: none;
+    color: inherit;
+    text-decoration: none;
+}
+img {
+    border: 0px;
+    vertical-align: bottom;
+}
+/*------------リセットｃｓｓ↑------------------------*/
+header {
+    background-color: rgb(41, 131, 75);
+    height: 60px;
+    width: 100%;
+    color: burlywood;
+    font-weight: 700;
     display: flex;
-    margin: 0 auto;
+    justify-content: space-around;
+    line-height: 55px;
 }
+
+header ul {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
 header li {
     color: cornsilk;
     list-style: none;
@@ -29,5 +60,21 @@ header li {
 }
 
 header li:hover{
-    color: chocolate;
+    color: burlywood;
+}
+
+#main-visual .container {
+    background: no-repeat center;
+    background-size: cover;
+    background-image: url("../img/brooke-lark-HlNcigvUi4Q-unsplash.jpg");
+    height: 700px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-visual .container h1 {
+    font-size: 50px;
+    color: rgb(116, 148, 69);
 }
