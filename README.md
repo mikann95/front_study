@@ -11,4 +11,4 @@
 
 ## coding 練習します
 - [x] アジェンダ機能をして。一時bootstrap利用しないで。
-- [ ] アジェンダ機能をして。bootstrap利用
+- [x] アジェンダ機能をして。bootstrap利用
