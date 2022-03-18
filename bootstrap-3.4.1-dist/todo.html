@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todoリスト</title>
+    <link rel="icon" href="https://fastly.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.34/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="./css/my.css" />
+
+    <link href="https://fastly.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.34/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header clearfix">
+
+            <nav>
+                <ul class="nav nav-pills ">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="input-group">
+                                <input id="search" type="text" class="form-control" maxlength="50" onkeydown="tuika_input(event)" placeholder="todo内容入力">
+                                <span class="input-group-btn">
+                              <button id = "add" class="btn btn-info" type="button">追加</button>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="pre-scrollable todobox">
+
+            <table class="table">
+
+                <tbody id="todolist">
+                    <tr onclick="tododone(this)">
+                        <th scope=" row "><span class="glyphicon glyphicon-tag "></span></th>
+                        <td>Column content</td>
+                        <td><span class="btn btn-info btn-xs delete " onclick=deletetodo(this)>删除</span></td>
+                    </tr>
+
+                    <tr class="tododone success" onclick="tododone(this)">
+                        <th scope="row "><span class="glyphicon glyphicon-check "></span></th>
+                        <td>Column content</td>
+                        <td><span class="btn btn-info btn-xs delete " onclick=deletetodo(this)>删除</span></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <footer class="footer ">
+            <p>&copy; 2022 Company, Inc.</p>
+        </footer>
+    </div>
+    <script src="./js/todo.js ">
+    </script>
+</body>
+
+</html>
